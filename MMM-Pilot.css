@@ -1,0 +1,41 @@
+/* Copy and paste any or all of these css entries into your custom.css file inside your
+ * css folder. The functions are annotated to make things as easy as possible for you.
+ * Use any colors you want! Go to - "http://htmlcolorcodes.com/color-picker/"
+ * Pick your color, copy and paste the HEX number. Example - #62FF00 = bright green.
+ */
+
+.MMM-Pilot .header {
+  color: white;                /* Header color. Default is white. */
+} 
+ 
+.MMM-Pilot .synopsis {
+  color: white;                /* Color each line. Default is white. */
+}  
+ 
+.MMM-Pilot .synopsis2 {
+  color: #62FF00;              /* Color each line. Default is white. */                 
+}
+
+.MMM-Pilot .synopsis3 {
+  color: white;                /* Color each line. Default is white. */              
+}
+
+.MMM-Pilot .synopsis4 {
+  color: #62FF00;                /* Color each line. Default is white. */               
+}
+
+.MMM-Pilot .synopsis5 {
+  color: white;                /* Color each line. Default is white. */               
+}
+
+.MMM-Pilot .synopsis6 {
+  color: #62FF00;                /* Color each line. Default is white. */               
+}
+
+.MMM-Pilot .synopsis7 {
+  color: white;                /* Color each line. Default is white. */
+}
+
+.MMM-Pilot .synopsis8 {
+  color: #62FF00;                /* Color each line. Default is white.  */
+}

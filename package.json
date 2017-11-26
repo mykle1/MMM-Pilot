@@ -1,0 +1,23 @@
+{
+  "name": "mmm-pilot",
+  "version": "1.0.0",
+  "description": "weather for pilots",
+  "main": "MMM-Pilot.js",
+  "dependencies": {
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mykle1/MMM-Pilot.git"
+  },
+  "author": "mykle1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mykle1/MMM-Pilot/issues"
+  },
+  "homepage": "https://github.com/mykle1/MMM-Pilot#readme"
+}
