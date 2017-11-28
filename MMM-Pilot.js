@@ -349,7 +349,12 @@
 		if (Pilot[0].METAR[7].station_id == "LIRF"){
 			Pilot[0].METAR[7].station_id = "LIRF" + " &nbsp ";
 		}
-		 
+		
+		//Station and conditions column headers
+		var station = document.createElement("div");
+		station.classList.add("small", "bright", "station");
+        station.innerHTML = "<u>Station</u> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <u>Conditions</u>";
+		top.appendChild(station);
 		 
          // flight_category
 		 // station_id
@@ -359,7 +364,7 @@
 		 // temp and dew point in C
         var synopsis = document.createElement("div");
         synopsis.classList.add("xsmall", "bright", "synopsis");
-		console.log(this.Pilot);
+	//	console.log(this.Pilot);
         synopsis.innerHTML = 
 						 aBullet + " &nbsp "
 					   + Pilot[0].METAR[0].station_id + " &nbsp &nbsp "
@@ -369,7 +374,8 @@
 					   + Pilot[0].METAR[0].sky_condition[0]["$"].sky_cover
 					   + Pilot[0].METAR[0].sky_condition[0]["$"].cloud_base_ft_agl + " &nbsp "
 			+ Math.round(Pilot[0].METAR[0].temp_c) + "/"
-			+ Math.round(Pilot[0].METAR[0].dewpoint_c) + " &nbsp ";
+			+ Math.round(Pilot[0].METAR[0].dewpoint_c) + " &nbsp "
+				+ moment(Pilot[0].METAR[0].observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]");
         top.appendChild(synopsis);
 		 
 		 
@@ -384,7 +390,8 @@
 					   + Pilot[0].METAR[1].sky_condition[0]["$"].sky_cover
 					   + Pilot[0].METAR[1].sky_condition[0]["$"].cloud_base_ft_agl + " &nbsp "
 			+ Math.round(Pilot[0].METAR[1].temp_c) + "/"
-			+ Math.round(Pilot[0].METAR[1].dewpoint_c) + " &nbsp ";
+			+ Math.round(Pilot[0].METAR[1].dewpoint_c) + " &nbsp "
+				+ moment(Pilot[0].METAR[1].observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]");
         top.appendChild(synopsis2);
 		 
 		 
@@ -399,7 +406,8 @@
 					   + Pilot[0].METAR[2].sky_condition[0]["$"].sky_cover
 					   + Pilot[0].METAR[2].sky_condition[0]["$"].cloud_base_ft_agl + " &nbsp "
 			+ Math.round(Pilot[0].METAR[2].temp_c) + "/"
-			+ Math.round(Pilot[0].METAR[2].dewpoint_c) + " &nbsp ";
+			+ Math.round(Pilot[0].METAR[2].dewpoint_c) + " &nbsp "
+				+ moment(Pilot[0].METAR[2].observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]");
         top.appendChild(synopsis3);
 		 
 		 
@@ -414,7 +422,8 @@
 					   + Pilot[0].METAR[3].sky_condition[0]["$"].sky_cover
 					   + Pilot[0].METAR[3].sky_condition[0]["$"].cloud_base_ft_agl + " &nbsp "
 			+ Math.round(Pilot[0].METAR[3].temp_c) + "/"
-			+ Math.round(Pilot[0].METAR[3].dewpoint_c) + " &nbsp ";
+			+ Math.round(Pilot[0].METAR[3].dewpoint_c) + " &nbsp "
+				+ moment(Pilot[0].METAR[3].observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]");
         top.appendChild(synopsis4);
 		 
 		 
@@ -429,7 +438,8 @@
 					   + Pilot[0].METAR[4].sky_condition[0]["$"].sky_cover
 					   + Pilot[0].METAR[4].sky_condition[0]["$"].cloud_base_ft_agl + " &nbsp "
 			+ Math.round(Pilot[0].METAR[4].temp_c) + "/"
-			+ Math.round(Pilot[0].METAR[4].dewpoint_c) + " &nbsp ";
+			+ Math.round(Pilot[0].METAR[4].dewpoint_c) + " &nbsp "
+				+ moment(Pilot[0].METAR[4].observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]");
         top.appendChild(synopsis5);
 		 
 		 
@@ -444,7 +454,8 @@
 					   + Pilot[0].METAR[5].sky_condition[0]["$"].sky_cover
 					   + Pilot[0].METAR[5].sky_condition[0]["$"].cloud_base_ft_agl + " &nbsp "
 			+ Math.round(Pilot[0].METAR[5].temp_c) + "/"
-			+ Math.round(Pilot[0].METAR[5].dewpoint_c) + " &nbsp ";
+			+ Math.round(Pilot[0].METAR[5].dewpoint_c) + " &nbsp "
+				+ moment(Pilot[0].METAR[5].observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]");
         top.appendChild(synopsis6);
 		 
 		 
@@ -459,7 +470,8 @@
 					   + Pilot[0].METAR[6].sky_condition[0]["$"].sky_cover
 					   + Pilot[0].METAR[6].sky_condition[0]["$"].cloud_base_ft_agl + " &nbsp "
 			+ Math.round(Pilot[0].METAR[6].temp_c) + "/"
-			+ Math.round(Pilot[0].METAR[6].dewpoint_c) + " &nbsp ";
+			+ Math.round(Pilot[0].METAR[6].dewpoint_c) + " &nbsp "
+				+ moment(Pilot[0].METAR[6].observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]");
         top.appendChild(synopsis7);
 		 
 		 
@@ -474,10 +486,11 @@
 					   + Pilot[0].METAR[7].sky_condition[0]["$"].sky_cover
 					   + Pilot[0].METAR[7].sky_condition[0]["$"].cloud_base_ft_agl + " &nbsp "
 			+ Math.round(Pilot[0].METAR[7].temp_c) + "/"
-			+ Math.round(Pilot[0].METAR[7].dewpoint_c) + " &nbsp ";
+			+ Math.round(Pilot[0].METAR[7].dewpoint_c) + " &nbsp "
+				+ moment(Pilot[0].METAR[7].observation_time, "YYYY-MM-DD HH:mm:ss Z").local().format("[(]HH:mm[)]");
         top.appendChild(synopsis8);
+		
 
-		 
         wrapper.appendChild(top);
         return wrapper;
 
